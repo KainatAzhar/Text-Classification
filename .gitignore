@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.env
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# System files
+.DS_Store
+
+# Large Model and Data files
+# It's good practice to not commit large model files to Git.
+# Add the specific model directory if it's too large.
+models/fine-tuned-bert/
