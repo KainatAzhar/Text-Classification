@@ -1,24 +1,45 @@
 # Text Classification with a Fine-Tuned BERT Model
 
-### Project Overview
-This project showcases a modern approach to Natural Language Processing (NLP) by fine-tuning a pre-trained **BERT (Bidirectional Encoder Representations from Transformers)** model for a specific text classification task. Unlike traditional models that rely on hand-crafted features, BERT learns contextual relationships between words, leading to state-of-the-art performance.
+### 🎯 Project Overview
+This project showcases a modern approach to Natural Language Processing (NLP) by fine-tuning a pre-trained **BERT (Bidirectional Encoder Representations from Transformers)** model for a specific text classification task. Unlike traditional models that rely on hand-crafted features, BERT learns contextual relationships between words, leading to state-of-the-art performance in sentiment analysis.
 
-### Dataset
-The model is fine-tuned on the **IMDb movie review dataset**, which contains 50,000 movie reviews labeled as either positive or negative. This dataset is a standard benchmark for sentiment analysis, allowing for the demonstration of a robust classification model.
+---
 
-### Methodology
-1.  **Tokenization and Encoding:** The raw text data is preprocessed using BERT's specialized tokenizer. It converts text into a numerical format that the model can understand, including `input_ids` and `attention_masks`.
-2.  **Model Loading:** A pre-trained `BertForSequenceClassification` model is loaded from the Hugging Face Transformers library. This powerful base model already possesses a deep understanding of language.
-3.  **Fine-tuning:** The pre-trained model is fine-tuned on the IMDb dataset. The model's final layers are updated to adapt to the specific sentiment classification task.
-4.  **Training and Evaluation:** The model is trained for a few epochs with a specialized optimizer (`AdamW`) and a learning rate scheduler, which are best practices for fine-tuning Transformer models. Its performance is evaluated on a validation set.
+### 💾 Dataset
+The model is fine-tuned on the **IMDb movie review dataset**, which contains 50,000 movie reviews labeled as either positive or negative. This dataset is a standard benchmark for sentiment analysis and is loaded directly from the Hugging Face `datasets` library.
 
-### Concluded Results
-The fine-tuned BERT model achieves a high classification accuracy (expected to be over 90%), significantly outperforming basic machine learning models. This project demonstrates proficiency in using large language models, a critical skill in modern NLP, and an understanding of advanced training techniques for pre-trained models.
+---
 
-### Technologies Used
+### 📈 Methodology
+1.  **Data Loading & Tokenization:** The IMDb dataset is loaded and preprocessed using BERT's specialized tokenizer (`bert-base-uncased`). This converts raw text into a numerical format, including `input_ids` and `attention_masks`, that the model can understand.
+
+2.  **Model Loading:** A pre-trained `BertForSequenceClassification` model is loaded from the Hugging Face Transformers library. This powerful base model already possesses a deep understanding of the English language.
+
+3.  **Fine-tuning:** The pre-trained model is fine-tuned on the IMDb dataset using the Hugging Face `Trainer` API. This process updates the model's weights to adapt it specifically to the sentiment classification task. Best practices such as using the `AdamW` optimizer are employed.
+
+4.  **Evaluation:** The model's performance is evaluated on a held-out test set, with accuracy being the primary metric. The final fine-tuned model is saved for inference.
+
+---
+
+### 📊 Results
+The fine-tuned BERT model achieves a high classification accuracy (typically over 90%), significantly outperforming simpler machine learning models. The project successfully demonstrates proficiency in using large language models, a critical skill in modern NLP, and an understanding of the fine-tuning process.
+
+---
+
+### 💻 Technologies Used
 - Python
-- Hugging Face Transformers
 - PyTorch
+- Hugging Face `transformers`
+- Hugging Face `datasets`
 - Pandas
 - Scikit-learn
-- Jupyter Notebook
+- Jupyter Notebook / Google Colab
+
+---
+
+### 🚀 How to Run
+
+1.  Clone this repository to your local machine.
+2.  Create a virtual environment and activate it.
+3.  Install the required libraries by running `pip install -r requirements.txt`.
+4.  Open and run the Jupyter Notebook `bert_sentiment_analysis.ipynb` located in the `notebooks/` directory.
