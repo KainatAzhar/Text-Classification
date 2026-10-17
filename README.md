@@ -22,7 +22,7 @@ The model is fine-tuned on the **IMDb movie review dataset**, which contains 50,
 ---
 
 ### 📊 Results
-The fine-tuned BERT model achieves a high classification accuracy (typically over 90%), significantly outperforming simpler machine learning models. The project successfully demonstrates proficiency in using large language models, a critical skill in modern NLP, and an understanding of the fine-tuning process.
+Fine-tuned for 3 epochs on a 2,000-review training subset and evaluated on 500 held-out reviews: **accuracy 88.6%, F1 0.888, precision 0.857, recall 0.923**. The project successfully demonstrates proficiency in using large language models, a critical skill in modern NLP, and an understanding of the fine-tuning process.
 
 ---
 
